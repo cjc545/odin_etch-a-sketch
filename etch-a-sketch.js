@@ -28,8 +28,6 @@ function getItemListeners(){
   }
 }
 
-
-
 canvasButton.addEventListener("click", canvasButtonFunctionality)
 
 function canvasButtonFunctionality(){
@@ -77,12 +75,12 @@ const randomHexColorCode = () => {
   window.onkeydown = function(e) {
     if(e.keyCode == 16)
       colour = "#FFFFF"
-    
+    if(e.keyCode == 82)
+      colour = randomHexColorCode();
+      
   }
   window.onkeyup = function(e) {
     if(e.keyCode == 16){
       colour = "#ffac09"
     }
-    if(e.keyCode == 82)
-      colour = randomHexColorCode();
   }
